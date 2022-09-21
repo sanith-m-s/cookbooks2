@@ -1,4 +1,6 @@
+import 'package:cookbooks2/font.dart';
 import'package:flutter/material.dart';
+
 void main() {
   runApp(
       MaterialApp(home: const Home())
@@ -11,27 +13,52 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text('First Route'),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            final snackBar = SnackBar(
+
+          child: Column(mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+
+
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
+                    primary: Colors.lightGreenAccent),
+                    onPressed: () {
+              final snackBar = SnackBar(
               content: const Text('Yay! A SnackBar!'),
               action: SnackBarAction(
-                label: 'Undo',
+              label: 'Undo',
+              onPressed: () {
+              },
+              ),
+              );
+              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              },
+                child: const Text('Show SnackBar'),
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
+                primary: Colors.black54),
+
+                child: Text("export font"),
                 onPressed: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=> const font())
+                  );
                 },
               ),
-            );
-            ScaffoldMessenger.of(context).showSnackBar(snackBar);
-          },
-          child: const Text('Show SnackBar'),
-        ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
+                    primary: Colors.lightGreenAccent),
+                child: Text("Lets begin"),
+                onPressed: () {},
+              )
+            ],
 
 
+          )
       ),
       drawer: Drawer(
         child: ListView(
