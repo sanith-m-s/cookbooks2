@@ -1,5 +1,6 @@
 import 'package:cookbooks2/font.dart';
 import'package:flutter/material.dart';
+import 'package:cookbooks2/customFont.dart';
 
 void main() {
   runApp(
@@ -13,79 +14,110 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('First Route'),
-      ),
-      body: Center(
+    return Container(
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('First Route'),
+        ),
+        body: Center(
 
-          child: Column(mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            child: Column(mainAxisAlignment: MainAxisAlignment.center,
+              children: [
 
 
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
-                    primary: Colors.lightGreenAccent),
-                    onPressed: () {
-              final snackBar = SnackBar(
-              content: const Text('Yay! A SnackBar!'),
-              action: SnackBarAction(
-              label: 'Undo',
-              onPressed: () {
-              },
-              ),
-              );
-              ScaffoldMessenger.of(context).showSnackBar(snackBar);
-              },
-                child: const Text('Show SnackBar'),
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
-                primary: Colors.black54),
-
-                child: Text("export font"),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
+                      primary: Colors.lightGreenAccent),
+                      onPressed: () {
+                final snackBar = SnackBar(
+                content: const Text('Yay! A SnackBar!'),
+                action: SnackBarAction(
+                label: 'Undo',
                 onPressed: () {
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=> const font())
-                  );
+                },
+                ),
+                );
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                },
+                  child: const Text('Show SnackBar'),
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
+                  primary: Colors.black54),
+
+                  child: Text("Export Font"),
+                  onPressed: () {
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=> const font())
+                    );
+                  },
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
+                      primary: Colors.lightGreenAccent),
+                  child: Text("Custom Fonts"),
+                  onPressed: () {
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=> const customFonts())
+                    );
+                  },
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
+                      primary: Colors.black54),
+                  child: Text("Lets begin"),
+                  onPressed: () {},
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
+                      primary: Colors.lightGreenAccent),
+                  child: Text("Lets begin"),
+                  onPressed: () {},
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
+                      primary: Colors.black54),
+                  child: Text("Lets begin"),
+                  onPressed: () {},
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
+                      primary: Colors.lightGreenAccent),
+                  child: Text("Lets begin"),
+                  onPressed: () {},
+                ),
+              ],
+
+
+
+            )
+        ),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                ),
+                child: Text('Drawer Header'),
+              ),
+              ListTile(
+                title: const Text('Item 1'),
+                onTap: () {
+                  Navigator.pop(context);
                 },
               ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
-                    primary: Colors.lightGreenAccent),
-                child: Text("Lets begin"),
-                onPressed: () {},
-              )
-            ],
-
-
-          )
-      ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
+              ListTile(
+                title: const Text('Item 2'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
               ),
-              child: Text('Drawer Header'),
-            ),
-            ListTile(
-              title: const Text('Item 1'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: const Text('Item 2'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
+            ],
+          ),
         ),
-      ),
 
+      ),
     );
+
   }
 }
