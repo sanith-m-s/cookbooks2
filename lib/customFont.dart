@@ -19,7 +19,8 @@ class customFonts extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       // The AppBar uses the app-default Raleway font.
-      appBar: AppBar(title: const Text('Custom Fonts')),
+      appBar: AppBar(backgroundColor: Colors.black45,
+          title: const Text('Custom Fonts')),
       body: const Center(
         // This Text widget uses the RobotoMono font.
         child: Text(

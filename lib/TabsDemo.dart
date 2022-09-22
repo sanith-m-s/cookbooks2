@@ -13,7 +13,7 @@ class TabBarDemo extends StatelessWidget {
       home: DefaultTabController(
         length: 3,
         child: Scaffold(
-          appBar: AppBar(
+          appBar: AppBar(backgroundColor: Colors.black45,
             bottom: const TabBar(
               tabs: [
                 Tab(icon: Icon(Icons.directions_car)),

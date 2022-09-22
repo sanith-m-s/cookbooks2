@@ -2,6 +2,7 @@ import 'package:cookbooks2/font.dart';
 import'package:flutter/material.dart';
 import 'package:cookbooks2/customFont.dart';
 import 'package:cookbooks2/TabsDemo.dart';
+import 'package:cookbooks2/validation.dart';
 
 void main() {
   runApp(
@@ -33,7 +34,7 @@ class Home extends StatelessWidget {
                       primary: Colors.blueGrey[100]),
                       onPressed: () {
                 final snackBar = SnackBar(
-                content: const Text('Yay! A SnackBar!'),
+                content: const Text('Zuu Zuu Zuu Zuu !!!!'),
                 action: SnackBarAction(
                 label: 'Undo',
                 onPressed: () {
@@ -76,8 +77,11 @@ class Home extends StatelessWidget {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
                       primary: Colors.blueGrey[400]),
-                  child: Text("Lets begin"),
-                  onPressed: () {},
+                  child: Text("Validation"),
+                  onPressed: () {
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=> const ValidationPage())
+                    );
+                  },
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
@@ -123,18 +127,25 @@ class Home extends StatelessWidget {
             children: [
               const DrawerHeader(
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  image: DecorationImage(image:NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEOvGby37eHbifxyfydJHZOdMzfzthpQpYFA&usqp=CAU',),),
+                  color: Colors.black45,
                 ),
-                child: Text('Drawer Header'),
+                child: Text(''),
               ),
               ListTile(
-                title: const Text('Item 1'),
+                title: const Text('Gallery'),
                 onTap: () {
                   Navigator.pop(context);
                 },
               ),
               ListTile(
-                title: const Text('Item 2'),
+                title: const Text('Photos'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: const Text('Videos'),
                 onTap: () {
                   Navigator.pop(context);
                 },

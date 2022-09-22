@@ -10,7 +10,7 @@ class _fontState extends State<font> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(backgroundColor: Colors.black45,
         title: const Text('menu'),
       ),
       body: const Center(
