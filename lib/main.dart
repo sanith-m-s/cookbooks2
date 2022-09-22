@@ -24,7 +24,9 @@ class Home extends StatelessWidget {
             child: Column(mainAxisAlignment: MainAxisAlignment.center,
               children: [
 
-
+                Image.network(width: 50,
+                    height: 100,
+                    alignment: AlignmentDirectional.topCenter,'https://media.istockphoto.com/photos/red-apple-picture-id184276818?k=20&m=184276818&s=612x612&w=0&h=QxOcueqAUVTdiJ7DVoCu-BkNCIuwliPEgtAQhgvBA_g=', ,),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
                       primary: Colors.lightGreenAccent),
