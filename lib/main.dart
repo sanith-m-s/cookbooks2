@@ -3,6 +3,7 @@ import'package:flutter/material.dart';
 import 'package:cookbooks2/customFont.dart';
 import 'package:cookbooks2/TabsDemo.dart';
 import 'package:cookbooks2/validation.dart';
+import 'package:cookbooks2/textbar.dart';
 
 void main() {
   runApp(
@@ -86,8 +87,11 @@ class Home extends StatelessWidget {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
                       primary: Colors.blueGrey),
-                  child: Text("Lets begin"),
-                  onPressed: () {},
+                  child: Text("Text Bar"),
+                  onPressed: () {
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=> const textbar())
+                    );
+                  },
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
