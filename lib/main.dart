@@ -1,6 +1,7 @@
 import 'package:cookbooks2/font.dart';
 import'package:flutter/material.dart';
 import 'package:cookbooks2/customFont.dart';
+import 'package:cookbooks2/TabsDemo.dart';
 
 void main() {
   runApp(
@@ -16,20 +17,20 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text('First Route'),
+        appBar: AppBar(backgroundColor: Colors.black45,
+          title: const Text('Menu'),
         ),
-        body: Center(
 
-            child: Column(mainAxisAlignment: MainAxisAlignment.center,
+
+        body:ListView( padding: EdgeInsets.all(100.0),
               children: [
 
-                Image.network(width: 50,
-                    height: 100,
-                    alignment: AlignmentDirectional.topCenter,'https://media.istockphoto.com/photos/red-apple-picture-id184276818?k=20&m=184276818&s=612x612&w=0&h=QxOcueqAUVTdiJ7DVoCu-BkNCIuwliPEgtAQhgvBA_g=', ,),
+                Image.network(width: 200,
+                    height: 200,
+                    alignment: AlignmentDirectional.topCenter,'https://wallpapercave.com/wp/wp2519499.jpg', ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
-                      primary: Colors.lightGreenAccent),
+                      primary: Colors.blueGrey[100]),
                       onPressed: () {
                 final snackBar = SnackBar(
                 content: const Text('Yay! A SnackBar!'),
@@ -41,11 +42,11 @@ class Home extends StatelessWidget {
                 );
                 ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 },
-                  child: const Text('Show SnackBar'),
+                  child: const Text('Show Snackbar'),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
-                  primary: Colors.black54),
+                  primary: Colors.blueGrey[100]),
 
                   child: Text("Export Font"),
                   onPressed: () {
@@ -55,7 +56,7 @@ class Home extends StatelessWidget {
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
-                      primary: Colors.lightGreenAccent),
+                      primary: Colors.blueGrey[200]),
                   child: Text("Custom Fonts"),
                   onPressed: () {
                     Navigator.push(context,MaterialPageRoute(builder: (context)=> const customFonts())
@@ -64,33 +65,57 @@ class Home extends StatelessWidget {
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
-                      primary: Colors.black54),
+                      primary: Colors.blueGrey[300]),
+                  child: Text("Demo Tabs"),
+                  onPressed: () {
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=> const TabBarDemo())
+                   );
+                  },
+                ),
+
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
+                      primary: Colors.blueGrey[400]),
                   child: Text("Lets begin"),
                   onPressed: () {},
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
-                      primary: Colors.lightGreenAccent),
+                      primary: Colors.blueGrey),
                   child: Text("Lets begin"),
                   onPressed: () {},
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
-                      primary: Colors.black54),
+                      primary: Colors.blueGrey[600]),
                   child: Text("Lets begin"),
                   onPressed: () {},
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
-                      primary: Colors.lightGreenAccent),
+                      primary: Colors.blueGrey[700]),
                   child: Text("Lets begin"),
                   onPressed: () {},
                 ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
+                      primary: Colors.blueGrey[800]),
+                  child: Text("Lets begin"),
+                  onPressed: () {},
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
+                      primary: Colors.blueGrey[900]),
+                  child: Text("Lets begin"),
+                  onPressed: () {},
+                ),
+
               ],
 
 
 
-            )
+
+
         ),
         drawer: Drawer(
           child: ListView(
