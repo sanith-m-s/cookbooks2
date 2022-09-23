@@ -4,6 +4,7 @@ import 'package:cookbooks2/customFont.dart';
 import 'package:cookbooks2/TabsDemo.dart';
 import 'package:cookbooks2/validation.dart';
 import 'package:cookbooks2/textbar.dart';
+import 'package:cookbooks2/parallax.dart';
 
 void main() {
   runApp(
@@ -97,7 +98,10 @@ class Home extends StatelessWidget {
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
                       primary: Colors.blueGrey[600]),
                   child: Text("Lets begin"),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=> const ExampleParallax())
+                    );
+                  },
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
