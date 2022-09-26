@@ -5,6 +5,7 @@ import 'package:cookbooks2/TabsDemo.dart';
 import 'package:cookbooks2/validation.dart';
 import 'package:cookbooks2/textbar.dart';
 import 'package:cookbooks2/parallax.dart';
+import 'package:cookbooks2/retriveText.dart';
 
 void main() {
   runApp(
@@ -97,7 +98,7 @@ class Home extends StatelessWidget {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
                       primary: Colors.blueGrey[600]),
-                  child: Text("Lets begin"),
+                  child: Text("Parallax"),
                   onPressed: () {
                     Navigator.push(context,MaterialPageRoute(builder: (context)=> const ExampleParallax())
                     );
@@ -106,8 +107,11 @@ class Home extends StatelessWidget {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
                       primary: Colors.blueGrey[700]),
-                  child: Text("Lets begin"),
-                  onPressed: () {},
+                  child: Text("Retrive text"),
+                  onPressed: () {
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=> const retriveText())
+                    );
+                  },
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
