@@ -6,10 +6,12 @@ import 'package:cookbooks2/validation.dart';
 import 'package:cookbooks2/textbar.dart';
 import 'package:cookbooks2/parallax.dart';
 import 'package:cookbooks2/retriveText.dart';
+import 'package:cookbooks2/fadeImage.dart';
 
 void main() {
   runApp(
       MaterialApp(home: const Home())
+
 
   );
 }
@@ -116,8 +118,11 @@ class Home extends StatelessWidget {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
                       primary: Colors.blueGrey[800]),
-                  child: Text("Lets begin"),
-                  onPressed: () {},
+                  child: Text("Animate Image"),
+                  onPressed: () {
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=> const animate())
+                    );
+                  },
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 40),
